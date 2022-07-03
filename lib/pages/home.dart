@@ -3,6 +3,7 @@ import 'package:flutter_wallet_project/animation/fade_animation.dart';
 import 'package:flutter_wallet_project/widgets/bottom_navigation_bar.dart';
 import 'package:flutter_wallet_project/widgets/history_wallet.dart';
 import 'package:flutter_wallet_project/widgets/icon_widget.dart';
+import 'package:flutter_wallet_project/widgets/swiper_card.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -67,6 +68,7 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 //Kartlar Listesi
+                SwiperCard(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
