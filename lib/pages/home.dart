@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallet_project/widgets/bottom_navigation_bar.dart';
 import 'package:flutter_wallet_project/widgets/history_wallet.dart';
 import 'package:flutter_wallet_project/widgets/icon_widget.dart';
 
@@ -159,6 +160,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
