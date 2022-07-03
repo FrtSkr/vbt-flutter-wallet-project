@@ -1,4 +1,4 @@
 # VBT Yaz Stajı - Flutter
 
 
-!["projectImage"](./images/projectImage.png)
+!["projectImage"](https://github.com/FrtSkr/vbt-flutter-wallet-project/blob/main/images/projectImage.png)
