@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallet_project/widgets/history_wallet.dart';
 import 'package:flutter_wallet_project/widgets/icon_widget.dart';
 
 class Home extends StatefulWidget {
@@ -135,6 +136,24 @@ class _HomeState extends State<Home> {
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
                 //History Wallet
+                const HistoryWallet(
+                  title: "Spotify Subscription",
+                  image:
+                      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/64px-Spotify_icon.svg.png",
+                  day: "21JUn 2021",
+                  time: "12:01 am",
+                  money: "11.90",
+                  isPositive: false,
+                ),
+                const HistoryWallet(
+                  title: "Pinterest Salary",
+                  image:
+                      "https://seeklogo.com/images/P/pinterest-logo-CA98998DCB-seeklogo.com.png",
+                  day: "20JUn 2021",
+                  time: "09:00 pm",
+                  money: "63.0",
+                  isPositive: true,
+                ),
               ],
             ),
           ),
