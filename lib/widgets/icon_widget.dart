@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallet_project/animation/fade_animation.dart';
 
 class IconWidget extends StatelessWidget {
   final String title;
@@ -18,24 +19,30 @@ class IconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(40),
+        FadeAnimation(
+          delay: delayAnimation,
+          child: Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(40),
+            ),
+            child: child,
           ),
-          child: child,
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
-        Text(
-          title,
-          style: const TextStyle(
-            color: Colors.grey,
+        FadeAnimation(
+          delay: delayAnimation,
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.grey,
+            ),
           ),
-        )
+        ),
       ],
     );
   }

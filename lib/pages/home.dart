@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallet_project/animation/fade_animation.dart';
 import 'package:flutter_wallet_project/widgets/bottom_navigation_bar.dart';
 import 'package:flutter_wallet_project/widgets/history_wallet.dart';
 import 'package:flutter_wallet_project/widgets/icon_widget.dart';
@@ -19,40 +20,43 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color(0xFF18182A),
         elevation: 0,
         actions: [
-          Row(
-            children: [
-              Column(
-                children: const [
-                  Text(
-                    "Welcome Back",
-                    style: TextStyle(
-                      color: Colors.grey,
+          FadeAnimation(
+            delay: 1,
+            child: Row(
+              children: [
+                Column(
+                  children: const [
+                    Text(
+                      "Welcome Back",
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "VBT",
-                    style: TextStyle(
+                    Text(
+                      "VBT",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                    height: 50,
+                    width: 50,
+                    margin: const EdgeInsets.only(left: 200, right: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: const Color(0xFF272A3F),
+                    ),
+                    child: const Icon(
+                      Icons.person_outline,
                       color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                  height: 50,
-                  width: 50,
-                  margin: const EdgeInsets.only(left: 200, right: 10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: const Color(0xFF272A3F),
-                  ),
-                  child: const Icon(
-                    Icons.person_outline,
-                    color: Colors.white,
-                  )),
-            ],
-          )
+                    )),
+              ],
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
